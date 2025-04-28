@@ -9,6 +9,11 @@ use App\Http\Resources\TaskResource;
 use App\Services\TaskService;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
+/**
+ * @group Tasks
+ *
+ * APIs for managing tasks data 
+ */
 class TaskController extends Controller
 {
     public function __construct(public TaskService $service)
@@ -20,6 +25,7 @@ class TaskController extends Controller
      * Display a listing of the resource.
      * 
      * @return AnonymousResourceCollection
+     * @responseFile storage/responses/tasks/get.tasks.json
      */
     public function index() :AnonymousResourceCollection
     {
